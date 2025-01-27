@@ -14,8 +14,10 @@ class SinglyLinkedList:
 
         def set_next(self, node):
             """Sets the self.next to a new node"""
-            if type(node) == type(self):
+            if type(node) == type(self) or node is None:
                 self.next = node
+            else:
+                raise TypeError
 
     def __init__(self):
         """Singly Linked List Constructor"""
