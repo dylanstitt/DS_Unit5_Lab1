@@ -17,7 +17,7 @@ class SinglyLinkedList:
             if type(node) == type(self) or node is None:
                 self.next = node
             else:
-                raise TypeError
+                raise TypeError('Node is not type SinglyNode or None')
 
     def __init__(self):
         """Singly Linked List Constructor"""
@@ -33,7 +33,7 @@ class SinglyLinkedList:
         for i in range(self.__size):
             out += f"{walk} "
             walk = walk.next
-            if walk != None:
+            if walk is not None:
                 out += "-> "
 
         out += "< TAIL"
